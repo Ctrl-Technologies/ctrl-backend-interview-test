@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+.vscode/
+.DS_Store
+.cache
+.eggs
+*.pyc
+ctrl_api.egg-info/
+takectrl-admin-sdk.json
+.idea/
+.pytest_cache/
+report.html
+.profile
