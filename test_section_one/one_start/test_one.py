@@ -1,11 +1,10 @@
-# from random import shuffle
 import random
-from copy import deepcopy
+
 
 def combine_two_lists_parallel():
     result_list = []
-    first_list =  [1,2,3,4,5,6]
-    second_list = ['A','B','C','D','E','F']
+    first_list = [1, 2, 3, 4, 5, 6]
+    second_list = ['A', 'B', 'C', 'D', 'E', 'F']
 
     """
     A PEP20 way of iterating efficiently through 2 lists.
@@ -16,6 +15,7 @@ def combine_two_lists_parallel():
     """
 
     return result_list
+
 
 def return_matches_in_list_parallel():
     result_list = []
@@ -30,7 +30,7 @@ def return_matches_in_list_parallel():
     See, how she leans her cheek upon her hand!
     O, that I were a glove upon that hand,
     That I might touch that cheek
-    """.replace(";","").replace(",","").replace(".","").replace("?","").replace("\n","").strip().lower()
+    """.replace(";", "").replace(",", "").replace(".", "").replace("?", "").replace("\n", "").strip().lower()
     second_input_string = """Sleep dwell upon thine eyes, peace in thy breast!
     Would I were sleep and peace, so sweet to rest!
     Hence will I to my ghostly father's cell,
@@ -45,22 +45,18 @@ def return_matches_in_list_parallel():
     # in case its not random enough
     if first_list[0] == second_list[0]:
         second_list = sorted(second_list, key=lambda k: random.random())
-    # print(first_list)
-    # print(second_list)
 
     """
     Return matches found in both lists, as pythonic as possible
     
-    
     """
 
-
     return set(result_list)
+
 
 def count_shakespeare():
     with open("one_start/shakespeare.txt") as file:
         shakespeare_text = file.read()
-        # print(shakespeare_text)
 
         """
         The challenge here is to count the occurances of words occuring more than once.
@@ -74,6 +70,7 @@ def count_shakespeare():
         }
         
         """
+
 
 def infinite_loop():
     """

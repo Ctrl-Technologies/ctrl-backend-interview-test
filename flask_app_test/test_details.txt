@@ -1,0 +1,54 @@
+Lets assume you are building the auth yourself or using a framework's auth. You can get creative and use whatever
+you need.
+
+I am not testing a in depth-knowledge of flask, merely thinking behind building an REST-API.
+
+Not all the requirements are pointed out for adding endpoints.
+Please be vigilant and think what will a production API need to function correctly.
+For example:
+    Adding a 'Add a authentication endpoint' needs to be named in line with
+    e.g: '/login' or '/user/login'.
+    Creating a user with an username 'a' should not be possible for obvious security reasons'
+
+To test the API I recommend using Insomnia or Postman:https://www.getpostman.com/apps or https://insomnia.rest/download/
+
+If I have create a example endpoint on the root endpoint http://localhost:8000/ and health endpoint
+http://localhost:8000/health
+
+DATABASE for the API:
+To keep things simple, preferably any of these would work:
+Sqlite, postgres, redis, memcache.
+
+Of course, it's open to use any database layer, just make sure to add
+details of how to setup the environment to spin up the API.
+
+This is an example of user data in the database:
+user = [
+    (1,
+        {'username': 'SolidSnake', 'email': 'a@a.com',
+        'password': 'some_password', 'balance': 1600.0}
+    ),
+    (2,
+        {'username': 'HanSolo', 'email': 'b@b.com',
+        'password': 'se_password', 'balance': 1500.0}
+    ),
+    (3,
+        {'username': 'Rick', 'email': 'c@c.com',
+        'password': 'sme_password', 'balance': 0.0}
+    ),
+]
+
+Example of auth token for SolidSnake:
+auth_tokens = [(1, 'xxxxxx')]
+
+The Api build should entail the following general
+endpoints with the appropriate HTTP method:
+
+1. add authentication endpoint for an user.
+2. add endpoint to retrieve user details.
+3. add endpoint to create a new user
+4. add endpoint to get only the user's balance
+5. add endpoint that can apply a credit or debit action on a user's balance.
+
+While building these endpoints be security aware and
+practical about the data going in and out.

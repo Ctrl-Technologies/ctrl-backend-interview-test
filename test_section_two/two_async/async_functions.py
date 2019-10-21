@@ -2,6 +2,7 @@ import asyncio
 import aiohttp
 import time
 
+
 async def method_one():
     """
     A method that makes the task sleep
@@ -19,14 +20,12 @@ async def method_two():
     loop = asyncio.get_event_loop()
     asyncio.set_event_loop(loop)
     url = "http://bnb.data.bl.uk/doc/resource/007446989.json"
-    # response = {}
     start = time.time()
     async with aiohttp.ClientSession(loop=loop) as client:
         async with client.get(url) as response:
             assert response.status == 200
             await response.json()
-            return "method_two: Time for API to respond = {}seconds".format((time.time()- start))
-    loop.close()
+            return "method_two: Time for API to respond = {}seconds".format((time.time() - start))
 
 
 async def method_three():
@@ -50,6 +49,4 @@ async def method_four(n=30):
         return 0
     elif n == 1:
         return 1
-    else:
-        return await method_four(n - 1) + await method_four(n - 2)
-    # return []
+    return await method_four(n - 1) + await method_four(n - 2)

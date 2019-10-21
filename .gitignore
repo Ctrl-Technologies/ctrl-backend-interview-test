@@ -11,3 +11,5 @@ takectrl-admin-sdk.json
 .pytest_cache/
 report.html
 .profile
+*_answer.py
+*/__pycache__/

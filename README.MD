@@ -14,13 +14,13 @@ Recommended Text Editors/IDEs
 * Visual Studio Code
 
 Get Started
-* Install python3.6
+* Install python3.6 (preferably python3.7)
 * create virtual environment for python
 * activate virtual environment
 * Install requirements with pip in virtual environment
 
 Challenges:
-* 3 Differen't challenges. 
+* 3 Different challenges.
 * 1st challenge will test basic python concepts
 * 2nd challenge will test async knowledge (requires python 3.5 >)
 * 3rd challenge will test API concepts with the flask framework
