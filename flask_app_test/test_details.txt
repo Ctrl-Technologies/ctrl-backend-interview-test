@@ -17,7 +17,10 @@ http://localhost:8000/health
 
 DATABASE for the API:
 To keep things simple, preferably any of these would work:
-Sqlite, postgres, redis, memcache.
+- Sqlite,
+- postgres,
+- (May not be a true database but will do for this purpose) redis,
+- memcache.
 
 Of course, it's open to use any database layer, just make sure to add
 details of how to setup the environment to spin up the API.
